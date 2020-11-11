@@ -32,8 +32,8 @@ firebase.initializeApp(firebaseConfig);
 
 
 // Save the list to database
-$("Save").click(function(){
-  firbase.firestore().collection("myList").add({
+$("#save").click(function(){
+  firebase.firestore().collection("myList").add({
     item: "try it"
   });
   console.log("save it");
