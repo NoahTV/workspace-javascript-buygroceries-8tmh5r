@@ -33,8 +33,11 @@ firebase.initializeApp(firebaseConfig);
 
 // Save the list to database
 $("#save").click(function(){
+  $('li').each(function(){
+    var value = $(this).text();
+    console.log(value);
+  })
   firebase.firestore().collection("myList").add({
-    item: "try it"
+    item: value
   });
-  console.log("save it");
 });
